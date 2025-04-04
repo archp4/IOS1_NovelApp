@@ -13,6 +13,9 @@
 		BD599C682DA060CB00B723A1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BD599C672DA060CB00B723A1 /* Base */; };
 		BD599C6A2DA060CC00B723A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD599C692DA060CC00B723A1 /* Assets.xcassets */; };
 		BD599C6D2DA060CC00B723A1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BD599C6C2DA060CC00B723A1 /* Base */; };
+		BD599C752DA0635800B723A1 /* HelloModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C742DA0635800B723A1 /* HelloModel.swift */; };
+		BD599C772DA0661D00B723A1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C762DA0661D00B723A1 /* APIManager.swift */; };
+		BD599C792DA06C1B00B723A1 /* Novel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C782DA06C1B00B723A1 /* Novel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		BD599C692DA060CC00B723A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD599C6C2DA060CC00B723A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD599C6E2DA060CC00B723A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD599C742DA0635800B723A1 /* HelloModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloModel.swift; sourceTree = "<group>"; };
+		BD599C762DA0661D00B723A1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		BD599C782DA06C1B00B723A1 /* Novel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				BD599C692DA060CC00B723A1 /* Assets.xcassets */,
 				BD599C6B2DA060CC00B723A1 /* LaunchScreen.storyboard */,
 				BD599C6E2DA060CC00B723A1 /* Info.plist */,
+				BD599C742DA0635800B723A1 /* HelloModel.swift */,
+				BD599C762DA0661D00B723A1 /* APIManager.swift */,
+				BD599C782DA06C1B00B723A1 /* Novel.swift */,
 			);
 			path = NovelApp;
 			sourceTree = "<group>";
@@ -138,7 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD599C792DA06C1B00B723A1 /* Novel.swift in Sources */,
+				BD599C752DA0635800B723A1 /* HelloModel.swift in Sources */,
 				BD599C652DA060CB00B723A1 /* ViewController.swift in Sources */,
+				BD599C772DA0661D00B723A1 /* APIManager.swift in Sources */,
 				BD599C612DA060CB00B723A1 /* AppDelegate.swift in Sources */,
 				BD599C632DA060CB00B723A1 /* SceneDelegate.swift in Sources */,
 			);
