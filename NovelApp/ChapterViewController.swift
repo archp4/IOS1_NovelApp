@@ -7,7 +7,11 @@
 
 import UIKit
 
-class ChapterViewController: ViewController,ChapterDataDelgate {
+class ChapterViewController: UIViewController,ChapterDataDelgate {
+    func onNetworkError(errorMessage: String) {
+        print(errorMessage)
+    }
+    
     func onDataRecieve(chapterDetails: ChapterData) {
         self.chapterData = chapterDetails
         loadChapter()
@@ -28,6 +32,8 @@ class ChapterViewController: ViewController,ChapterDataDelgate {
     
     
     @IBOutlet weak var dataIB: UITextView!
+    
+    
     
     /*
     // MARK: - Navigation

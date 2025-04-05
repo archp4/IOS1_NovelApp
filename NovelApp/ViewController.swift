@@ -78,6 +78,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ChapterViewController
+        {
+            let index = chapterTable.indexPathForSelectedRow?.row ?? 0
+            vc.chapterURL = novel?.chapters[index].href ?? ""
+        }
+    }
     
 }
