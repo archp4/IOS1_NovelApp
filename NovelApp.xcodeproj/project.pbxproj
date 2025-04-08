@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1865282DA4ABBD0050379B /* NovelDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1865272DA4ABBD0050379B /* NovelDataViewController.swift */; };
 		BD599C612DA060CB00B723A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C602DA060CB00B723A1 /* AppDelegate.swift */; };
 		BD599C632DA060CB00B723A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C622DA060CB00B723A1 /* SceneDelegate.swift */; };
-		BD599C652DA060CB00B723A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C642DA060CB00B723A1 /* ViewController.swift */; };
 		BD599C682DA060CB00B723A1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BD599C672DA060CB00B723A1 /* Base */; };
 		BD599C6A2DA060CC00B723A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD599C692DA060CC00B723A1 /* Assets.xcassets */; };
 		BD599C6D2DA060CC00B723A1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BD599C6C2DA060CC00B723A1 /* Base */; };
 		BD599C752DA0635800B723A1 /* HelloModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C742DA0635800B723A1 /* HelloModel.swift */; };
 		BD599C772DA0661D00B723A1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C762DA0661D00B723A1 /* APIManager.swift */; };
-		BD599C792DA06C1B00B723A1 /* Novel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C782DA06C1B00B723A1 /* Novel.swift */; };
+		BD599C792DA06C1B00B723A1 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C782DA06C1B00B723A1 /* Models.swift */; };
 		BD599C7B2DA07B7800B723A1 /* NovelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C7A2DA07B7800B723A1 /* NovelCell.swift */; };
 		BD599C7D2DA0815600B723A1 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C7C2DA0815600B723A1 /* HomeTableViewController.swift */; };
 		BD599C7F2DA0939200B723A1 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C7E2DA0939200B723A1 /* SearchTableViewController.swift */; };
@@ -23,17 +23,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD1865272DA4ABBD0050379B /* NovelDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDataViewController.swift; sourceTree = "<group>"; };
 		BD599C5D2DA060CB00B723A1 /* NovelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD599C602DA060CB00B723A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD599C622DA060CB00B723A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD599C642DA060CB00B723A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD599C672DA060CB00B723A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD599C692DA060CC00B723A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD599C6C2DA060CC00B723A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD599C6E2DA060CC00B723A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD599C742DA0635800B723A1 /* HelloModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloModel.swift; sourceTree = "<group>"; };
 		BD599C762DA0661D00B723A1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		BD599C782DA06C1B00B723A1 /* Novel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novel.swift; sourceTree = "<group>"; };
+		BD599C782DA06C1B00B723A1 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		BD599C7A2DA07B7800B723A1 /* NovelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelCell.swift; sourceTree = "<group>"; };
 		BD599C7C2DA0815600B723A1 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BD599C7E2DA0939200B723A1 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -73,17 +73,17 @@
 				BD599C7A2DA07B7800B723A1 /* NovelCell.swift */,
 				BD599C602DA060CB00B723A1 /* AppDelegate.swift */,
 				BD599C622DA060CB00B723A1 /* SceneDelegate.swift */,
-				BD599C642DA060CB00B723A1 /* ViewController.swift */,
 				BD599C662DA060CB00B723A1 /* Main.storyboard */,
 				BD599C692DA060CC00B723A1 /* Assets.xcassets */,
 				BD599C6B2DA060CC00B723A1 /* LaunchScreen.storyboard */,
 				BD599C6E2DA060CC00B723A1 /* Info.plist */,
 				BD599C742DA0635800B723A1 /* HelloModel.swift */,
 				BD599C762DA0661D00B723A1 /* APIManager.swift */,
-				BD599C782DA06C1B00B723A1 /* Novel.swift */,
+				BD599C782DA06C1B00B723A1 /* Models.swift */,
 				BD599C7C2DA0815600B723A1 /* HomeTableViewController.swift */,
 				BD599C7E2DA0939200B723A1 /* SearchTableViewController.swift */,
 				BD599C802DA0ACEF00B723A1 /* ChapterViewController.swift */,
+				BD1865272DA4ABBD0050379B /* NovelDataViewController.swift */,
 			);
 			path = NovelApp;
 			sourceTree = "<group>";
@@ -160,12 +160,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD599C812DA0ACEF00B723A1 /* ChapterViewController.swift in Sources */,
+				BD1865282DA4ABBD0050379B /* NovelDataViewController.swift in Sources */,
 				BD599C7D2DA0815600B723A1 /* HomeTableViewController.swift in Sources */,
 				BD599C7F2DA0939200B723A1 /* SearchTableViewController.swift in Sources */,
 				BD599C7B2DA07B7800B723A1 /* NovelCell.swift in Sources */,
-				BD599C792DA06C1B00B723A1 /* Novel.swift in Sources */,
+				BD599C792DA06C1B00B723A1 /* Models.swift in Sources */,
 				BD599C752DA0635800B723A1 /* HelloModel.swift in Sources */,
-				BD599C652DA060CB00B723A1 /* ViewController.swift in Sources */,
 				BD599C772DA0661D00B723A1 /* APIManager.swift in Sources */,
 				BD599C612DA060CB00B723A1 /* AppDelegate.swift in Sources */,
 				BD599C632DA060CB00B723A1 /* SceneDelegate.swift in Sources */,

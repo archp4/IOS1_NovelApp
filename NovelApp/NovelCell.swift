@@ -11,6 +11,8 @@ class NovelCell: UITableViewCell {
 
     var novel: Novel?
     
+    var noImage = "https://img.novelcool.com/logo/201810/7b/Master_of_Ninja_World5172.jpg" 
+    
     @IBOutlet weak var imageIB: UIImageView!
     @IBOutlet weak var titleIB: UILabel!
     @IBOutlet weak var updateIB: UILabel!
@@ -25,6 +27,7 @@ class NovelCell: UITableViewCell {
         if novel?.img_src != nil {
             guard let url = novel?.img_src else { return }
             downloadImage(from: URL(string: url)!)
+            imageIB.contentMode = UIView.ContentMode.scaleAspectFill
         }
     }
 

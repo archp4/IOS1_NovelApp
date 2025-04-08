@@ -7,31 +7,31 @@
 
 import Foundation
 
-protocol HomepageNovelDelgate {
+protocol HomepageNovelDelegate {
     func onDataRecieve(novels: [Novel])
     func onNetworkError(errorMessage: String)
 }
 
-protocol SearchNovelDelgate {
+protocol SearchNovelDelegate {
     func onDataRecieve(novels: [NovelDetail])
     func onNetworkError(errorMessage: String)
 }
 
-protocol NovelDataDelgate {
+protocol NovelDataDelegate {
     func onDataRecieve(novelData: NovelData)
     func onNetworkError(errorMessage: String)
 }
 
-protocol ChapterDataDelgate {
+protocol ChapterDataDelegate {
     func onDataRecieve(chapterDetails: ChapterData)
     func onNetworkError(errorMessage: String)
 }
 
 class APIManager {
-    var newNovelProtocol : HomepageNovelDelgate?
-    var searchProtocol : SearchNovelDelgate?
-    var novelDataDelgate: NovelDataDelgate?
-    var chapterDelgate: ChapterDataDelgate?
+    var newNovelDelegate : HomepageNovelDelegate?
+    var searchDelegate : SearchNovelDelegate?
+    var novelDataDelegate: NovelDataDelegate?
+    var chapterDelegate: ChapterDataDelegate?
     static var shared = APIManager()
 
     func fetchRoot() {
@@ -70,12 +70,12 @@ class APIManager {
             data, response,error in
             
             if error != nil {
-                self.newNovelProtocol?.onNetworkError(errorMessage: "API Error")
+                self.newNovelDelegate?.onNetworkError(errorMessage: "API Error")
                 return
             }
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                self.newNovelProtocol?.onNetworkError(errorMessage: "There is no good resposne")
+                self.newNovelDelegate?.onNetworkError(errorMessage: "There is no good resposne")
                 return
             }
             
@@ -84,7 +84,7 @@ class APIManager {
                 do {
                     let novels = try decoder.decode([Novel].self, from: goodData)
                     DispatchQueue.main.async {
-                        self.newNovelProtocol?.onDataRecieve(novels: novels)
+                        self.newNovelDelegate?.onDataRecieve(novels: novels)
                     }
                 } catch {
                     print(error)
@@ -101,12 +101,12 @@ class APIManager {
             data, response,error in
             
             if error != nil {
-                self.searchProtocol?.onNetworkError(errorMessage: "API Error")
+                self.searchDelegate?.onNetworkError(errorMessage: "API Error")
                 return
             }
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                self.searchProtocol?.onNetworkError(errorMessage: "There is no good resposne")
+                self.searchDelegate?.onNetworkError(errorMessage: "There is no good resposne")
                 return
             }
             
@@ -115,7 +115,7 @@ class APIManager {
                 do {
                     let novels = try decoder.decode([NovelDetail].self, from: goodData)
                     DispatchQueue.main.async {
-                        self.searchProtocol?.onDataRecieve(novels: novels)
+                        self.searchDelegate?.onDataRecieve(novels: novels)
                     }
                 } catch {
                     print(error)
@@ -131,12 +131,12 @@ class APIManager {
         let task = URLSession.shared.dataTask(with: url){
             data, response,error in
             if error != nil {
-                self.novelDataDelgate?.onNetworkError(errorMessage: "API Error")
+                self.novelDataDelegate?.onNetworkError(errorMessage: "API Error")
                 return
             }
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                self.novelDataDelgate?.onNetworkError(errorMessage: "There is no good resposne ")
+                self.novelDataDelegate?.onNetworkError(errorMessage: "There is no good resposne ")
                 return
             }
             
@@ -145,7 +145,7 @@ class APIManager {
                 do {
                     let novel = try decoder.decode(NovelData.self, from: goodData)
                     DispatchQueue.main.async {
-                        self.novelDataDelgate?.onDataRecieve(novelData: novel)
+                        self.novelDataDelegate?.onDataRecieve(novelData: novel)
                     }
                 } catch {
                     print(error)
@@ -161,12 +161,12 @@ class APIManager {
         let task = URLSession.shared.dataTask(with: url){
             data, response,error in
             if error != nil {
-                self.chapterDelgate?.onNetworkError(errorMessage: "API Error")
+                self.chapterDelegate?.onNetworkError(errorMessage: "API Error")
                 return
             }
             
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                self.chapterDelgate?.onNetworkError(errorMessage: "There is no good resposne ")
+                self.chapterDelegate?.onNetworkError(errorMessage: "There is no good resposne ")
                 return
             }
             
@@ -175,7 +175,7 @@ class APIManager {
                 do {
                     let chapter = try decoder.decode(ChapterData.self, from: goodData)
                     DispatchQueue.main.async {
-                        self.chapterDelgate?.onDataRecieve(chapterDetails: chapter)
+                        self.chapterDelegate?.onDataRecieve(chapterDetails: chapter)
                     }
                 } catch {
                     print(error)

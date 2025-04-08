@@ -7,37 +7,77 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, SearchNovelDelgate {
-    func onDataRecieve(novels: [NovelDetail]) {
-        self.novels = novels
-        tableView.reloadData()
+class SearchTableViewController: UITableViewController, SearchNovelDelegate,UISearchBarDelegate {
+    
+    var indicator = UIActivityIndicatorView()
+    var novels: [NovelDetail] = []
+    @IBOutlet weak var searchBarIB: UISearchBar!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        searchBarIB.delegate = self
+        APIManager.shared.searchDelegate = self
+        activityIndicator()
+        indicator.backgroundColor = UIColor.white
     }
     
     func onNetworkError(errorMessage: String) {
-        print(errorMessage)
+        errorText(errorMessage: errorMessage)
+    }
+    
+    func onDataRecieve(novels: [NovelDetail]) {
+        self.novels = novels
+        tableView.reloadData()
+        errorTextView.isHidden=true
+        indicator.stopAnimating()
+        indicator.hidesWhenStopped = true
+        errorTextView.isHidden=true
+    }
+    
+    func activityIndicator() {
+        indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 40, 40))
+        indicator.style = UIActivityIndicatorView.Style.medium
+        indicator.center = CGPointMake(self.view.frame.size.width  / 2, self.view.frame.size.height / 2.40)
+        self.view.addSubview(indicator)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ViewController
+        if let vc = segue.destination as? NovelDataViewController
         {
             let index = tableView.indexPathForSelectedRow?.row ?? 0
             vc.novelURL = novels[index].href
         }
     }
     
-    var novels: [NovelDetail] = []
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        APIManager.shared.searchProtocol = self
-    }
-
-    @IBAction func onSearch(_ sender: UITextField) {
-        let query = sender.text ?? ""
-        if query.count > 3 {
-            APIManager.shared.searchNovel(query: query)
+    var errorTextView = UITextView()
+    func errorText(errorMessage message:String){
+        DispatchQueue.main.async {
+            self.errorTextView.isHidden=false
+            self.errorTextView.text = message
+            self.errorTextView.frame = CGRect(x: self.view.frame.width/2, y: self.view.frame.height/2, width: self.view.frame.width, height: 40)
+            self.errorTextView.center = CGPointMake(self.view.frame.size.width  / 2, self.view.frame.size.height / 2.40)
+            self.errorTextView.textColor = UIColor.red
+            self.errorTextView.textAlignment = NSTextAlignment.center
+            self.view.addSubview(self.errorTextView)
         }
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        requestQuery()
+    }
+    
+    func requestQuery(){
+        let query = searchBarIB.text ?? ""
+        if query.count > 3 {
+            APIManager.shared.searchNovel(query: query)
+            indicator.startAnimating()
+        }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        requestQuery()
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
