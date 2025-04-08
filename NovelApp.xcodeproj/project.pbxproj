@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BD1865282DA4ABBD0050379B /* NovelDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1865272DA4ABBD0050379B /* NovelDataViewController.swift */; };
+		BD18652B2DA4BA650050379B /* LocalNovel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD1865292DA4BA650050379B /* LocalNovel.xcdatamodeld */; };
+		BD18652D2DA4BCB70050379B /* LocalNovelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18652C2DA4BCB70050379B /* LocalNovelManager.swift */; };
+		BD1865302DA4BE900050379B /* NovelEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18652E2DA4BE900050379B /* NovelEntity+CoreDataClass.swift */; };
+		BD1865312DA4BE900050379B /* NovelEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD18652F2DA4BE900050379B /* NovelEntity+CoreDataProperties.swift */; };
 		BD599C612DA060CB00B723A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C602DA060CB00B723A1 /* AppDelegate.swift */; };
 		BD599C632DA060CB00B723A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD599C622DA060CB00B723A1 /* SceneDelegate.swift */; };
 		BD599C682DA060CB00B723A1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BD599C672DA060CB00B723A1 /* Base */; };
@@ -24,6 +28,10 @@
 
 /* Begin PBXFileReference section */
 		BD1865272DA4ABBD0050379B /* NovelDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovelDataViewController.swift; sourceTree = "<group>"; };
+		BD18652A2DA4BA650050379B /* LocalNovel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LocalNovel.xcdatamodel; sourceTree = "<group>"; };
+		BD18652C2DA4BCB70050379B /* LocalNovelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNovelManager.swift; sourceTree = "<group>"; };
+		BD18652E2DA4BE900050379B /* NovelEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NovelEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BD18652F2DA4BE900050379B /* NovelEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NovelEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BD599C5D2DA060CB00B723A1 /* NovelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD599C602DA060CB00B723A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD599C622DA060CB00B723A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,8 @@
 		BD599C5F2DA060CB00B723A1 /* NovelApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD18652E2DA4BE900050379B /* NovelEntity+CoreDataClass.swift */,
+				BD18652F2DA4BE900050379B /* NovelEntity+CoreDataProperties.swift */,
 				BD599C7A2DA07B7800B723A1 /* NovelCell.swift */,
 				BD599C602DA060CB00B723A1 /* AppDelegate.swift */,
 				BD599C622DA060CB00B723A1 /* SceneDelegate.swift */,
@@ -84,6 +94,8 @@
 				BD599C7E2DA0939200B723A1 /* SearchTableViewController.swift */,
 				BD599C802DA0ACEF00B723A1 /* ChapterViewController.swift */,
 				BD1865272DA4ABBD0050379B /* NovelDataViewController.swift */,
+				BD1865292DA4BA650050379B /* LocalNovel.xcdatamodeld */,
+				BD18652C2DA4BCB70050379B /* LocalNovelManager.swift */,
 			);
 			path = NovelApp;
 			sourceTree = "<group>";
@@ -159,9 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1865302DA4BE900050379B /* NovelEntity+CoreDataClass.swift in Sources */,
+				BD1865312DA4BE900050379B /* NovelEntity+CoreDataProperties.swift in Sources */,
 				BD599C812DA0ACEF00B723A1 /* ChapterViewController.swift in Sources */,
+				BD18652B2DA4BA650050379B /* LocalNovel.xcdatamodeld in Sources */,
 				BD1865282DA4ABBD0050379B /* NovelDataViewController.swift in Sources */,
 				BD599C7D2DA0815600B723A1 /* HomeTableViewController.swift in Sources */,
+				BD18652D2DA4BCB70050379B /* LocalNovelManager.swift in Sources */,
 				BD599C7F2DA0939200B723A1 /* SearchTableViewController.swift in Sources */,
 				BD599C7B2DA07B7800B723A1 /* NovelCell.swift in Sources */,
 				BD599C792DA06C1B00B723A1 /* Models.swift in Sources */,
@@ -389,6 +405,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD1865292DA4BA650050379B /* LocalNovel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD18652A2DA4BA650050379B /* LocalNovel.xcdatamodel */,
+			);
+			currentVersion = BD18652A2DA4BA650050379B /* LocalNovel.xcdatamodel */;
+			name = LocalNovel.xcdatamodeld;
+			path = /Users/n01598909/Desktop/IOS1_NovelApp/NovelApp/LocalNovel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BD599C552DA060CA00B723A1 /* Project object */;
 }
