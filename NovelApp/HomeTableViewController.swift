@@ -21,6 +21,7 @@ class HomeTableViewController: UITableViewController, HomepageNovelDelegate {
         activityIndicator()
         indicator.startAnimating()
         indicator.backgroundColor = UIColor.white
+        print(LocalNovelManager.shared.getChapters().count)
     }
 
     func onDataRecieve(novels: [Novel]) {

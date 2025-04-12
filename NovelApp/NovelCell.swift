@@ -10,7 +10,6 @@ import UIKit
 class NovelCell: UITableViewCell {
 
     var novel: Novel?
-    
     var noImage = "https://img.novelcool.com/logo/201810/7b/Master_of_Ninja_World5172.jpg" 
     
     @IBOutlet weak var imageIB: UIImageView!

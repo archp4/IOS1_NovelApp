@@ -34,10 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var persistentContainer: NSPersistentContainer = {
             
-            let container = NSPersistentContainer(name: "weatherapp_coredata_model")
+            let container = NSPersistentContainer(name: "NovelCoreData")
             container.loadPersistentStores(completionHandler: { (storeDescription, error) in
                 if let error = error as NSError? {
-                    
                     fatalError("Unresolved error \(error), \(error.userInfo)")
                 }
             })

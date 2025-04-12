@@ -27,6 +27,12 @@ class ChapterViewController: UIViewController,ChapterDataDelegate {
         errorText(errorMessage: errorMessage)
     }
     
+    @IBAction func onSaveClick(_ sender: Any) {
+        LocalNovelManager.shared.add(name: chapterData?.name ?? "" , content: chapterData?.data ?? "")
+        LocalNovelManager.shared.saveContext()
+        LocalButton.isHidden = true
+    }
+    
     func onDataRecieve(chapterDetails: ChapterData) {
         self.chapterData = chapterDetails
         loadChapter()
@@ -45,12 +51,17 @@ class ChapterViewController: UIViewController,ChapterDataDelegate {
             self.view.addSubview(self.errorTextView)
         }
     }
+   
+    @IBOutlet weak var LocalButton: UIBarButtonItem!
     
     func loadChapter(){
         dataIB.text = chapterData?.data
         self.title = chapterData?.name
         LoadingView.isHidden = true
         LoadingIndi.stopAnimating()
+        if LocalNovelManager.shared.isChapterSaved(title: self.title!) {
+            LocalButton.isHidden = true
+        }
     }
     
     

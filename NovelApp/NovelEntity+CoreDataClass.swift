@@ -2,7 +2,7 @@
 //  NovelEntity+CoreDataClass.swift
 //  NovelApp
 //
-//  Created by Arch Umeshbhai Patel on 2025-04-07.
+//  Created by Arch Umeshbhai Patel on 2025-04-11.
 //
 //
 
